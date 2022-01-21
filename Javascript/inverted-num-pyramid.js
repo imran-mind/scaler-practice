@@ -12,4 +12,7 @@ function invertedNumericPyramid(n){
     console.log(p);
 }
 
+// id -> sufyan
+// select * from user_table where email="sufyan@gmail.com";
+// 10 rows return
 invertedNumericPyramid(4)
