@@ -1,17 +1,20 @@
 package array;
 
-public class LinearSearch {
-    public static int linearSearch(int[] a, int b){
+import java.util.ArrayList;
+import java.util.Arrays;
 
-        for(int i=0; i<a.length; i++){
-            if(a[i] == b){
+public class LinearSearch {
+    public static int linearSearch(ArrayList<Integer> a, int b){
+
+        for(int i=0; i<a.size(); i++){
+            if(a.get(i) == b){
                 return 1;
             }
         }
         return 0;
     }
     public static void main(String[] args) {
-        int[] arr = {1, 4, 3, 2,8};
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1,2,3,4,5));
         int searchVal = 5;
         System.out.println(linearSearch(arr,searchVal));
     }
