@@ -11,7 +11,7 @@ public class LinearSearch {
         return 0;
     }
     public static void main(String[] args) {
-        int[] arr = {1, 4, 3, 2};
+        int[] arr = {1, 4, 3, 2,8};
         int searchVal = 5;
         System.out.println(linearSearch(arr,searchVal));
     }
