@@ -39,7 +39,7 @@ public class PlusOneToDigitsArray {
 
     }
     public static void main(String[] args) {
-        int[] a= {9,9,9};
+        int[] a= {0, 3, 7, 6, 4, 0, 5, 5, 5};
 //        int[] a= {4,3,2,1};
 //        int[] a= {2,1,0};
 //            int[] a = {9,9};
