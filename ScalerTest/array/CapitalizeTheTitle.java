@@ -38,7 +38,7 @@ public class CapitalizeTheTitle {
         return new String(sb);
     }
     public static void main(String[] args) {
-        String title = "i lOve leetcode";//"First leTTeR of EACH Word";//"capiTalIze tHe titLe";
+        String title = "i lOve leetcode";// "First leTTeR of EACH Word";//"capiTalIze tHe titLe";
         System.out.println(capitalizeTitle(title));
     }
 }
