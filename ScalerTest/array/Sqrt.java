@@ -7,41 +7,48 @@ import jdk.jshell.execution.Util;
 public class Sqrt {
     private static final double PRECISION = 6;
 
-    public static int sqrt(int X, double low, double high) {
+    public static int sqrBinarySearch(int x){
+            if(x ==0 )
+                return 0;
+            int start = 1;
+            int end = x;
+            int ans = 1;
+            while(start<=end){
+                int mid = start + (end - start) / 2;
 
-        int mid = (int) (low + high) / 2;
-        int p = mid * mid;
-        // uncomment below line to see how we reach the final answer
-//         System.out.println(low + " " + high + " " + mid + " " + p);
-
-        if (p == X || (Math.abs(X - p) <  PRECISION)) {
-            return mid;
-        }
-        if (p < X) {
-            return sqrt(X, mid, high);
-        }
-        return sqrt(X, low, mid);
+                if(mid <= x/mid ){
+                    start = mid + 1;
+                    ans = mid;
+                }else {
+                    end = mid - 1;
+                }
+            }
+            return ans;
     }
-    public static int sqrt(int X) {
-        if(X <= 0)
-            return 0;
-        int i = 1;
-//        int v = i;
-        for (; i < X; ++i) {
-            int p = i * i;
-            if (p == X) {
-                // perfect square
+
+    public static int sqrtLinear(int N) {
+        int ans = 0;
+        for(int i=1; i<N; i++){
+            long mult = i*i;
+
+//            System.out.println("i "+i+" mult "+mult + " N "+N );
+            if(mult == N){
                 return i;
             }
-            if (p > X) {
-//                System.out.println(p + " "+ X);
-                // found left part of decimal
-                return sqrt(X, i - 1, i);
+
+            if(mult < N){
+                ans = i;
             }
+
+            if(((i+1)*(i+1)) > N){
+                return ans;
+            }
+//            System.out.println("ans =>" +ans);
         }
-        return 1;
+        return ans;
     }
     public static void main(String[] args) {
-        System.out.println(sqrt(930675566));
+        int n = 2147483646; // 930675566; //2147483646;
+        System.out.println(sqrBinarySearch(n));
     }
 }
