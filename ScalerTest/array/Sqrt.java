@@ -27,28 +27,45 @@ public class Sqrt {
     }
 
     public static int sqrtLinear(int N) {
-        int ans = 0;
-        for(int i=1; i<N; i++){
-            long mult = i*i;
+        int i = 1;
+        while(i*i < N){
+            i++;
+        }
+        return i;
+    }
 
-//            System.out.println("i "+i+" mult "+mult + " N "+N );
-            if(mult == N){
-                return i;
-            }
+    public static double sqRootPrecision(int x, int p){
+        if(x == 0 )
+            return 0;
+        int start = 1;
+        int end = x;
+        double ans = 1;
+        while(start<=end){
+            int mid = start + (end - start) / 2;
 
-            if(mult < N){
-                ans = i;
+            if(mid <= x/mid ){
+                start = mid + 1;
+                ans = mid;
+            }else {
+                end = mid - 1;
             }
+        }
 
-            if(((i+1)*(i+1)) > N){
-                return ans;
+        double inc = 0.1;
+        for(int place=0; place<=p; place++){
+            while (ans * ans <= x){
+                ans = ans + inc;
             }
-//            System.out.println("ans =>" +ans);
+            ans = ans - inc;
+            inc = inc / 10;
         }
         return ans;
     }
     public static void main(String[] args) {
-        int n = 2147483646; // 930675566; //2147483646;
-        System.out.println(sqrBinarySearch(n));
+        int n = 9;
+//        int n = 2147483646; // 930675566; //2147483646;
+        double sqroot= sqRootPrecision(10, 3);
+        System.out.println("Value:  "+String.format("%.3f",sqroot));
+//        System.out.println(sqrtLinear(n));
     }
 }
