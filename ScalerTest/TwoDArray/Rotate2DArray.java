@@ -57,21 +57,21 @@ public class Rotate2DArray {
         }
     }
     public static void main(String[] args) {
-        int[][] l = {{1,2},{3,4}};
-        ArrayList<ArrayList<Integer>>  list = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> zeroRow = new ArrayList<>();
-        zeroRow.add(1);
-        zeroRow.add(2);
-        list.add(zeroRow);
-
-        ArrayList<Integer> oneRow = new ArrayList<>();
-        oneRow.add(3);
-        oneRow.add(4);
-        list.add(oneRow);
-        System.out.println("original Matrix "+list);
-        solve(list);
-//        solveByArr(l);
-//        display2DArray(l);
+        int[][] l = {{1,2,3},{4,5,6},{7,8,9}};
+//        ArrayList<ArrayList<Integer>>  list = new ArrayList<ArrayList<Integer>>();
+//        ArrayList<Integer> zeroRow = new ArrayList<>();
+//        zeroRow.add(1);
+//        zeroRow.add(2);
+//        list.add(zeroRow);
+//
+//        ArrayList<Integer> oneRow = new ArrayList<>();
+//        oneRow.add(3);
+//        oneRow.add(4);
+//        list.add(oneRow);
+//        System.out.println("original Matrix "+list);
+//        solve(list);
+        solveByArr(l);
+        display2DArray(l);
 //        System.out.println("rotated 90 Deg "+Arrays.toString(l));
 
     }
