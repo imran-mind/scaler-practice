@@ -18,22 +18,40 @@ public class SumOfAllOddLengthSubarrays {
         int len = arr.length;
         int ans = 0;
         ArrayList<Integer> odds = getOdds(len);
-        for(int k=0; k<odds.size(); k++){
-            int count = odds.get(0); // 1 3 5
 
-            for(int i=0; i < count ; i++){
-                int m = 0;
-                for(int j=i; j<arr.length; j++){
-                    if(m < count){
-                        System.out.print(arr[j]+" ");
-                    }else{
-                        break;
-                    }
-                    m++;
-                }
-                System.out.println();
+        int comb = 3;
+        int count = 0;
+        for(int i=0; i<len; i++){
+            int m = i;
+            int k =  0;
+//            System.out.println("count "+count);
+            while(k<comb && count < comb){
+
+                System.out.print(arr[m]+" ");
+                k++;
+                m++;
+
             }
+            m = i;
+            count++;
+            System.out.println();
         }
+//        for(int k=0; k<odds.size(); k++){
+//            int count = odds.get(0); // 1 3 5
+//
+//            for(int i=0; i < count ; i++){
+//                int m = 0;
+//                for(int j=i; j<arr.length; j++){
+//                    if(m < count){
+//                        System.out.print(arr[j]+" ");
+//                    }else{
+//                        break;
+//                    }
+//                    m++;
+//                }
+//                System.out.println();
+//            }
+//        }
 
         System.out.println(odds);
         return ans;
