@@ -1,7 +1,9 @@
 package StringPract;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class KthDistinctStringInAnArray {
 
@@ -16,36 +18,43 @@ public class KthDistinctStringInAnArray {
     * */
     public static String kthDistinct(String[] arr, int k) {
         String ans = "";
-        Map<String,Integer> map = new HashMap<>();
+        Map<String,Integer> map = new LinkedHashMap<>();
         for(int i=0; i<arr.length; i++){
-//            map1.put(word, map1.getOrDefault(word,0)+1);
-
             map.put(arr[i], map.getOrDefault(arr[i],0)+1);
         }
+
 //        System.out.println(map);
-        if(map.size() <= k){
-            return ans;
-        }
-        int max = 0;
-        int p = k;
-        for(int i=0; i<arr.length; i++){
-            if(map.get(arr[i]) == 1 && i >= max && p!=0){
-//                System.out.println(p);
-                ans = arr[i];
-                max = i;
-                p--;
+
+        Set keys = map.keySet();
+//        System.out.println("All keys are: " + keys);
+        // To get all key: value
+        int count = k;
+        int m = 0;
+        for(Object key: keys){
+            if(map.get(key) == 1 && count > 0) {
+//                System.out.println("map.get(key) "+map.get(key));
+                ans = (String) key;
+                m++;
+                count--;
             }
         }
-        return ans;
+//        System.out.println(m+" ** "+k);
+
+        if(m == k){
+            return ans;
+        }else{
+//            System.out.println("ans " + ans);
+            return "";
+        }
     }
 
     public static void main(String[] args) {
-//        String[] str = {"d","b","c","b","c","a"};
-//        int k = 2;
+        String[] str = {"d","b","c","b","c","a"};
+        int k = 2;
 //        String[] str = {"aaa","aa","a"};
 //        int k = 1;
-        String[] str = {"a","b","a"};
-        int k = 3;
+//        String[] str = {"a","b","a"};
+//        int k = 3;
         String res = kthDistinct(str,k);
         System.out.println("res "+res);
     }
