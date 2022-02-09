@@ -12,10 +12,11 @@ public class Sqrt {
                 return 0;
             int start = 1;
             int end = x;
+
             int ans = 1;
             while(start<=end){
                 int mid = start + (end - start) / 2;
-
+                System.out.println("mid "+mid +" start: "+start + " end :"+ end);
                 if(mid <= x/mid ){
                     start = mid + 1;
                     ans = mid;
@@ -64,7 +65,7 @@ public class Sqrt {
     public static void main(String[] args) {
         int n = 9;
 //        int n = 2147483646; // 930675566; //2147483646;
-        double sqroot= sqRootPrecision(10, 3);
+        double sqroot= sqrBinarySearch(9);
         System.out.println("Value:  "+String.format("%.3f",sqroot));
 //        System.out.println(sqrtLinear(n));
     }
