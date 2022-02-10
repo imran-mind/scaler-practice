@@ -9,16 +9,17 @@ public class FindPalindrome {
         while(start<=end){
             if(s.charAt(start) == s.charAt(end)){
                 start++;
-                end++;
+                end--;
                 ans = true;
             }else{
                 ans = false;
+                break;
             }
         }
         return ans;
     }
     public static void main(String[] args) {
-        String s = "kaka";
+        String s = "mom";
         boolean res = strPalindrome(s);
         System.out.println("ans "+res);
     }
