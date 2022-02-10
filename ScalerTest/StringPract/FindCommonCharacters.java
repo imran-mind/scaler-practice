@@ -1,9 +1,6 @@
 package StringPract;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FindCommonCharacters {
 
@@ -42,7 +39,13 @@ public class FindCommonCharacters {
     public static void main(String[] args) {
 //        String[] words = {"bella","label","roller"};
         String[] words = {"cool","lock","cook"};
+        Set set = new HashSet();
+        set.add("--...-.");
+        set.add("--...-.");
 
+        set.add("--...--.");
+        set.add("--...--.");
+        System.out.println(set);
         System.out.println(commonChars(words));
     }
 }
