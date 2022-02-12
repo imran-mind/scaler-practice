@@ -26,12 +26,15 @@ public class SingleNumber {
         int n = nums.length;
         int a = 0;
         for(int i=0; i<n; i++){
+            System.out.println(a ^ nums[i]);
+
             a = a ^ nums[i];
         }
         return a;
     }
     public static void main(String[] args) {
         int[] nums = {4,1,2,1,2};
-        System.out.println(singleNumber(nums));
+        System.out.println("ans "+singleNumber(nums));
+
     }
 }
