@@ -46,7 +46,7 @@ public class SubArraySumsEqualsK {
            }
         }
         System.out.println(prevSum);
-        // {3:1 , 7:1, 14:1
+        // {3:1 , 7:1, 14:1}
         return count;
     }
     public static void main(String[] args) {

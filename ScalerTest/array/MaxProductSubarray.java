@@ -50,6 +50,7 @@ public class MaxProductSubarray {
             mi = Math.min(a[i], mi*a[i]);
             ans = Math.max(ans,ma);
         }
+        System.out.println("ans");
         return ans;
     }
 
@@ -60,3 +61,5 @@ public class MaxProductSubarray {
 
     }
 }
+
+//[0, 1, -2, 3, 4, 0, 5, -27, 9, 0],  o/p [1, -2, 3, 4, 5, -27, 9, 0, 0, 0].
