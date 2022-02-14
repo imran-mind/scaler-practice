@@ -54,10 +54,34 @@ public class MaxProductSubarray {
         return ans;
     }
 
+    public static int maxProdSubArrayApproach2(int[] a){
+        int prod = 1;
+        int max = Integer.MIN_VALUE;
+        //left to right
+        for(int i=0; i<a.length; i++){
+            prod = prod * a[i];
+            max = Math.max(max, prod);
+            if(prod ==0){
+                prod = 1;
+            }
+        }
+        prod = 1;
+        for(int i=a.length-1; i>=0; i--){
+            prod = prod * a[i];
+            max = Math.max(max, prod);
+            if(prod == 0){
+                prod = 1;
+            }
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
         int[] arr = {2,3,-2,4}; //{-2,0,-1};
 //        System.out.println("prod "+maxProdSubarray(arr));
-        System.out.println("prod "+maxProdSubArrayOptimize(arr));
+//        System.out.println("prod "+maxProdSubArrayOptimize(arr));
+        System.out.println("prod "+maxProdSubArrayApproach2(arr));
+
 
     }
 }
