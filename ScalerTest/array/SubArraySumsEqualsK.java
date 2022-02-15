@@ -1,6 +1,7 @@
 package array;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class SubArraySumsEqualsK {
@@ -49,6 +50,7 @@ public class SubArraySumsEqualsK {
         // {3:1 , 7:1, 14:1}
         return count;
     }
+
     public static void main(String[] args) {
         int[] items = {3,4,7,2,-3,1,4,2};//{1,1,1};//{1,2,3,4,5};
         int k=7;
