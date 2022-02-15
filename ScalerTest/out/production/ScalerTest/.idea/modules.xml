@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BreakDemo/2DArray/2DArray.iml" filepath="$PROJECT_DIR$/BreakDemo/2DArray/2DArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hashing/Hashing.iml" filepath="$PROJECT_DIR$/Hashing/Hashing.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScalerTest.iml" filepath="$PROJECT_DIR$/ScalerTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringPract/StringPract.iml" filepath="$PROJECT_DIR$/StringPract/StringPract.iml" />
       <module fileurl="file://$PROJECT_DIR$/TwoDArray/TwoDArray.iml" filepath="$PROJECT_DIR$/TwoDArray/TwoDArray.iml" />
