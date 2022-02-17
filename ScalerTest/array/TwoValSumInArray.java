@@ -63,8 +63,8 @@ class TwoValSumInArray{
         return ans;
     }
     public static void main(String[] args){
-        int[] nums = {12,7,11,15,2};
-        int target = 91;
+        int[] nums = {2,7,11,15};//{12,7,11,15,2};
+        int target = 9;
         int[] ans = compareTargetNum(nums, target);
         System.out.println(Arrays.toString(ans));
     }
