@@ -33,6 +33,9 @@ public class RotateArrayByKth {
             high--;
         }
     }
+    // n = 5
+    // k = 2
+    // 5-2-1
     public static void rotateEff(int[] arr,int k){
         int n = arr.length;
         k = k % n;
@@ -42,10 +45,11 @@ public class RotateArrayByKth {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5,6,7};
-        int k = 16;
+        int[] nums = {1,2,3,4,5};//{1,2,3,4,5,6,7};
+        int k = 2;//16;
 //        rotate(nums,k);
         rotateEff(nums,k);
+        System.out.println(5-2-1);
         System.out.println("rotated "+ Arrays.toString(nums));
     }
 }
