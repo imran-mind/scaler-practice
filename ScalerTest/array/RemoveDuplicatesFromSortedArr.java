@@ -18,6 +18,7 @@ public class RemoveDuplicatesFromSortedArr {
         }
         return j+1;
     }
+    //s3cret
 
     public static void main(String[] args) {
         int[] arr= {2,2,2,2,2};
