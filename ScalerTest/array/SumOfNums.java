@@ -11,8 +11,20 @@ public class SumOfNums {
         return sum;
     }
 
+    public static void solve(int n){
+        for(int i=0; i<(1<<n); i++){
+            int j = i;
+            while (j > 0){
+                System.out.println("i "+i+" j "+j);
+
+                j = j -1;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] a = {1,2,3,4};
-        System.out.println(sum(a, a.length));
+//        System.out.println(sum(a, a.length));
+        solve(2);
     }
 }
