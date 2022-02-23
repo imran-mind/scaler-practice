@@ -69,5 +69,5 @@ public class SubArraySum {
 //        subArraySum1(a);
         subArraySum2(a);
 
-    } 
+    }
 }
